@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Keep Pass</string>
+    <!--Login strings-->
+    <string name="brandDescription">Keep Pass logo completo</string>
+    <string name="welcomeText">Bienvenido</string>
+    <string name="PasswordBox">Contraseña o llave privada</string>
+    <string name="loginButton">Iniciar sesion</string>
+    <string name="firsttimeText">¿Primera vez usando este dispositivo o este servicio?</string>
+    <string name="getStartedButton">Empezar</string>
+    <string name="newDevButton">Nuevo dispositivo</string>
+    <string name="infoAboutText">Si quiere saber más sobre cómo funciona, puede ver un breve video aquí o enviarnos un email a</string>
+</resources>
