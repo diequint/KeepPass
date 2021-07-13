@@ -1,3 +1,4 @@
+# Default android Gitignore files & directories
 *.iml
 .gradle
 /local.properties
@@ -13,3 +14,8 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Development files, resources & databases
+README.md
+/app/src/main/res/drawable/*.png
+/app/build
