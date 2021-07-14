@@ -80,7 +80,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/getStartedButton"
+        android:text="@string/getStarted"
         app:layout_constraintBottom_toTopOf="@+id/infoAboutText"
         app:layout_constraintEnd_toStartOf="@+id/newDevButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -95,7 +95,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/newDevButton"
+        android:text="@string/newDevice"
         app:layout_constraintBottom_toTopOf="@+id/infoAboutText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/getStartedButton" />
