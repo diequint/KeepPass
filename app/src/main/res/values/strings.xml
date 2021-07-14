@@ -1,23 +1,48 @@
 <resources>
+    <!--Activity names-->
     <string name="app_name">Keep Pass</string>
+    <string name="getStarted">Get Started</string>
+    <string name="newDevice">New device</string>
+    <string name="synchronise">Synchronise</string>
+    <string name="myCredentials">My credentials</string>
+    <string name="settings">Settings</string>
+
+    <!--Widely used strings-->
+    <string name="saveText">Save</string>
+    <string name="continueText">Continue</string>
+    <string name="blankString">blank</string><!--Just to show specific data no matter the languaje-->
+    <string name="userName">Name</string>
+    <string name="password">Password</string>
+    <string name="passErr">Wrong password</string>
+
     <!--Login strings-->
     <string name="brandDescription">Keep Pass full logo</string>
     <string name="welcomeText">Welcome</string>
     <string name="PasswordBox">Password or private key</string>
     <string name="loginButton">Login</string>
     <string name="firsttimeText">First time using this device or this service?</string>
-    <string name="getStartedButton">Get Started</string>
-    <string name="newDevButton">New device</string>
     <string name="infoAboutText">If you want to learn more about how it works you can watch a short video here or email us to</string>
-    <!--Login strings-->
+
+    <!--Get started strings-->
     <string name="registerText">Please register your info to use the app</string>
-    <string name="userName">Name</string>
     <string name="whyName">(Just to personalize your login)</string>
-    <string name="passBox">Password</string>
     <string name="confirmPassBox">Confirm your password</string>
-    <string name="saveButton">Save</string>
+    <string name="passNoMatch">Passwords don´t match</string>
+    <string name="passShort">Your password is too short</string>
     <string name="keepYourKey">This is your private key, you will only have to use it if you forget your password or if you decide to export your credencials, so keep it in a safe place</string>
-    <string name="blankString">blank string :v</string>
-    <string name="continueText">Continue</string>
-    <!-- strings-->
+
+    <!--New Device strings-->
+    <string name="stepDescription">Number of step</string>
+    <string name="syncInfo">Look for the "Synchronise" section your other device and select "Add new device", it will show you a QR code. Then, press "Got it"</string>
+    <string name="gotItText">Got it</string>
+    <string name="confirmId">Please confirm this is you</string>
+    <string name="syncKeys">To sync your credentials press "Continue" on your other device and press "Got it" to open the scanner</string>
+    <string name="phoneReady">Your device is ready. From now and then you can synchronise it by going to the corresponding section.</string>
+
+    <!--Synchronize strings-->
+
+    <!--My credentials strings-->
+
+    <!--Settings strings-->
+
 </resources>

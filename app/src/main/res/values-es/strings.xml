@@ -1,23 +1,48 @@
 <resources>
-    <string name="app_name">Keep Pass</string>
-    <!--Login strings-->
-    <string name="brandDescription">Keep Pass logo completo</string>
-    <string name="welcomeText">Bienvenido</string>
-    <string name="PasswordBox">Contraseña o llave privada</string>
-    <string name="loginButton">Iniciar sesion</string>
-    <string name="firsttimeText">¿Primera vez usando este dispositivo o este servicio?</string>
-    <string name="getStartedButton">Empezar</string>
-    <string name="newDevButton">Nuevo dispositivo</string>
-    <string name="infoAboutText">Si quiere saber más sobre cómo funciona, puede ver un breve video aquí o enviarnos un email a</string>
-    <!--Login strings-->
-    <string name="registerText">Por favor registre su información para usar la app</string>
-    <string name="userName">Nombre</string>
-    <string name="whyName">(Solo para personalizar la pantalla de inicio)</string>
-    <string name="passBox">Contraseña</string>
-    <string name="confirmPassBox">Confirme su contraseña</string>
-    <string name="saveButton">Save</string>
-    <string name="keepYourKey">Esta es su clave privada, solo tendrá que usarla si olvida su contraseña o si exporta sus credenciales, así que mantengala en un lugar seguro</string>
-    <string name="blankString"> </string>
-    <string name="continueText">Continuar</string>
-    <!-- strings-->
+<!--Activity names-->
+<string name="app_name">Keep Pass</string>
+<string name="getStarted">Empezar</string>
+<string name="newDevice">Nuevo dispositivo</string>
+<string name="synchronise">Sincronizar</string>
+<string name="myCredentials">Mis credenciales</string>
+<string name="settings">Ajustes</string>
+
+<!--Widely used strings-->
+<string name="saveText">Guardar</string>
+<string name="continueText">Continuar</string>
+<string name="blankString">blanco</string><!--Just to show specific data no matter the languaje-->
+<string name="userName">Nombre</string>
+<string name="password">Contraseña</string>
+<string name="passErr">Contraseña incorrecta</string>
+
+<!--Login strings-->
+<string name="brandDescription">Keep Pass logo completo</string>
+<string name="welcomeText">Bienvenido</string>
+<string name="PasswordBox">Contraseña o llave privada</string>
+<string name="loginButton">Iniciar sesion</string>
+<string name="firsttimeText">¿Primera vez usando este dispositivo o este servicio?</string>
+<string name="infoAboutText">Si quiere saber más sobre cómo funciona, puede ver un breve video aquí o enviarnos un email a</string>
+
+<!--Get started strings-->
+<string name="registerText">Por favor registre su información para usar la aplicación</string>
+<string name="whyName">(Solo para personalizar su pantalla de inicio)</string>
+<string name="confirmPassBox">Confirme su contraseña</string>
+<string name="passNoMatch">Las contraseñas no coinciden</string>
+<string name="passShort">Su contraseña es demasiado corta</string>
+<string name="keepYourKey">Esta es su clave privada, solo tendrá que usarla si olvida su contraseña o si exporta sus credenciales, así que mantengala en un lugar seguro</string>
+
+<!--New Device strings-->
+<string name="stepDescription">Número de paso</string>
+<string name="syncInfo">Busque la sección "Sincronizar" en su otro dispositivo y seleccione "Añadir nuevo", le mostrará un QR. Luego presione "Lo tengo"</string>
+<string name="gotItText">Lo tengo</string>
+<string name="confirmId">Por favor confirme que es usted</string>
+<string name="syncKeys">Para sincronizar sus credenciales presione "Continuar" en su otro dispositivo y presione "Lo tengo" para abrir el escaner</string>
+<string name="phoneReady">Su dispositivo está listo. A partir de ahora puede sincronizarlo en la sección correspondiente</string>
+
+<!--Synchronize strings-->
+
+<!--My credentials strings-->
+
+<!--Settings strings-->
+
 </resources>
