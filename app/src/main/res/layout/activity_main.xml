@@ -10,10 +10,10 @@
         android:id="@+id/KeepPassBrand"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         android:contentDescription="@string/brandDescription"
         android:src="@drawable/kepp_pass_brand"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +24,7 @@
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/welcomeText"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,15 +59,19 @@
 
     <TextView
         android:id="@+id/firsttimeText"
-        android:layout_width="333dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center_horizontal"
         android:text="@string/firsttimeText"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/getStartedButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/getStartedButton"
@@ -74,29 +79,31 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/getStartedButton"
+        app:layout_constraintBottom_toTopOf="@+id/infoAboutText"
         app:layout_constraintEnd_toStartOf="@+id/newDevButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firsttimeText" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/newDevButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/newDevButton"
+        app:layout_constraintBottom_toTopOf="@+id/infoAboutText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/getStartedButton"
-        app:layout_constraintTop_toBottomOf="@+id/firsttimeText" />
+        app:layout_constraintStart_toEndOf="@+id/getStartedButton" />
 
     <TextView
         android:id="@+id/infoAboutText"
-        android:layout_width="329dp"
-        android:layout_height="91dp"
+        android:layout_width="325dp"
+        android:layout_height="69dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"

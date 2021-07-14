@@ -9,4 +9,15 @@
     <string name="getStartedButton">Débuter</string>
     <string name="newDevButton">Neuf appareil</string>
     <string name="infoAboutText">Si vous souhaitez en savoir plus, vous pouvez regarder une courte vidéo ici ou nous envoyer un email à</string>
+    <!--Login strings-->
+    <string name="registerText">Please register your info to use the app</string>
+    <string name="userName">Prenom</string>
+    <string name="whyName">(Just to personalize your login screen)</string>
+    <string name="passBox">Password</string>
+    <string name="confirmPassBox">Confirm your password</string>
+    <string name="saveButton">Save</string>
+    <string name="keepYourKey">This is your private key, you will only use it if you forget your password or if you decide to export your credencials, so keep it in a safe place</string>
+    <string name="blankString"> </string>
+    <string name="continueText">Continue</string>
+    <!-- strings-->
 </resources>

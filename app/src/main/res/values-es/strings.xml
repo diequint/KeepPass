@@ -9,4 +9,15 @@
     <string name="getStartedButton">Empezar</string>
     <string name="newDevButton">Nuevo dispositivo</string>
     <string name="infoAboutText">Si quiere saber más sobre cómo funciona, puede ver un breve video aquí o enviarnos un email a</string>
+    <!--Login strings-->
+    <string name="registerText">Por favor registre su información para usar la app</string>
+    <string name="userName">Nombre</string>
+    <string name="whyName">(Solo para personalizar la pantalla de inicio)</string>
+    <string name="passBox">Contraseña</string>
+    <string name="confirmPassBox">Confirme su contraseña</string>
+    <string name="saveButton">Save</string>
+    <string name="keepYourKey">Esta es su clave privada, solo tendrá que usarla si olvida su contraseña o si exporta sus credenciales, así que mantengala en un lugar seguro</string>
+    <string name="blankString"> </string>
+    <string name="continueText">Continuar</string>
+    <!-- strings-->
 </resources>
