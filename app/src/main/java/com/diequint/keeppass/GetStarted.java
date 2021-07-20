@@ -1,11 +1,15 @@
 package com.diequint.keeppass;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class GetStarted extends AppCompatActivity {
     EditText personName, passBox, confirmPassBox;
@@ -41,6 +45,7 @@ public class GetStarted extends AppCompatActivity {
         if (password.equals(confirm) && password.length()>=8) {//User enter an appropiate password
             errorMessage.setVisibility(View.INVISIBLE);
             //Still have to encript and make shared preferences here
+            savePreferences(username, password);
         } else if (password.length()<8){
             errorMessage.setVisibility(View.VISIBLE);   //Password entered is too short
             errorMessage.setText(R.string.passShort);
@@ -48,5 +53,15 @@ public class GetStarted extends AppCompatActivity {
             errorMessage.setVisibility(View.VISIBLE);   //Passwords doesn't match
             errorMessage.setText(R.string.passNoMatch);
         }
+    }
+
+    private void savePreferences(String username, String password) {
+        //If file preferences.xml doesn't exist then it creates it
+        SharedPreferences preferences = getSharedPreferences("preferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("username", username);
+        editor.putString("password", password);
+        editor.commit();
+        Toast.makeText(getApplicationContext(), /*getString(R.string.done)*/"Done", Toast.LENGTH_LONG).show();
     }
 }

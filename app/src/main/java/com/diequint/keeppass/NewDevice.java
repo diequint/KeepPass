@@ -16,6 +16,7 @@ public class NewDevice extends AppCompatActivity {
     TextView confirmId, errPassword, syncKeys, phoneReady;
     EditText passwordBox;
     Button got_it_2, got_it_3, endNewDev;
+    String savedPass="tamal123";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +50,16 @@ public class NewDevice extends AppCompatActivity {
                 step1.setAlpha((float) 0.5); //Sets opacity by half
                 break;
             case R.id.got_it_2:
-                syncKeys.setVisibility(View.VISIBLE);
-                got_it_3.setVisibility(View.VISIBLE);
-                step3.setVisibility(View.VISIBLE);
-                step2.setAlpha((float) 0.5);
+                if (passwordBox.getText().toString().equals(savedPass)) {
+                    errPassword.setVisibility(View.INVISIBLE);
+                    syncKeys.setVisibility(View.VISIBLE);
+                    got_it_3.setVisibility(View.VISIBLE);
+                    step3.setVisibility(View.VISIBLE);
+                    step2.setAlpha((float) 0.5);
+                } else {
+                    errPassword.setVisibility(View.VISIBLE);
+                    errPassword.setText(R.string.passNoMatch);
+                }
                 break;
             case R.id.got_it_3:
                 phoneReady.setVisibility(View.VISIBLE);
