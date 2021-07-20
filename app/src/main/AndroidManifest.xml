@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
-        <activity android:name=".NewDevice"></activity>
+        <activity android:name=".MyKeys" />
+        <activity android:name=".NewDevice" />
         <activity android:name=".GetStarted" />
         <activity android:name=".MainActivity">
             <intent-filter>
