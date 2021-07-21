@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.diequint.keeppass.ui.main.EncryptionHelper;
+
 public class MainActivity extends AppCompatActivity {
     TextView welcomeText, passErr, firsttimeText;
     EditText PasswordBox;
@@ -32,15 +34,18 @@ public class MainActivity extends AppCompatActivity {
         getStartedBtn = findViewById(R.id.getStartedBtn);
         newDevButton = findViewById(R.id.newDevButton);
         loadPreferences();
+        EncryptionHelper encript = new EncryptionHelper();
+        Toast.makeText(getApplicationContext(), encript.generateRandom(15,10), Toast.LENGTH_LONG).show();
+        String msg = encript.encryptMessage("hola", "taco");
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), encript.decryptMessage(msg,"taco"), Toast.LENGTH_LONG).show();
     }
 
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.loginButton:
-                Toast.makeText(getApplicationContext(), "clicking button", Toast.LENGTH_SHORT).show();
                 if (count <= maxAttempts) {
                     if (PasswordBox.getText().toString().equals(savedPass)) {
-                        Toast.makeText(getApplicationContext(), "IF condition", Toast.LENGTH_LONG).show();
                         Intent intent1 = new Intent(this, MyKeys.class);
                         startActivity(intent1);
                     } else {
