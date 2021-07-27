@@ -1,6 +1,6 @@
 <resources>
     <!--Activity names-->
-    <string name="app_name">Keep Pass</string>
+    <string name="app_name" translatable="false">Keep Pass</string>
     <string name="getStarted">Get Started</string>
     <string name="newDevice">New device</string>
     <string name="synchronise">Synchronise</string>
@@ -27,22 +27,39 @@
     <string name="registerText">Please register your info to use the app</string>
     <string name="whyName">(Just to personalize your login)</string>
     <string name="confirmPassBox">Confirm your password</string>
-    <string name="passNoMatch">Passwords don´t match</string>
+    <string name="passNoMatch">"Passwords don't match"</string>
     <string name="passShort">Your password is too short</string>
     <string name="keepYourKey">This is your private key, you will only have to use it if you forget your password or if you decide to export your credencials, so keep it in a safe place</string>
 
     <!--New Device strings-->
     <string name="stepDescription">Number of step</string>
-    <string name="syncInfo">Look for the "Synchronise" section your other device and select "Add new device", it will show you a QR code. Then, press "Got it"</string>
+    <string name="syncInfo">"Look for the 'Synchronise' section your other device and select 'Add new device', it will show you a QR code. Then, press 'Got it'"</string>
     <string name="gotItText">Got it</string>
     <string name="confirmId">Please confirm this is you</string>
-    <string name="syncKeys">To sync your credentials press "Continue" on your other device and press "Got it" to open the scanner</string>
+    <string name="syncKeys">"To sync your credentials press 'Continue' on your other device and press 'Got it' to open the scanner"</string>
     <string name="phoneReady">Your device is ready. From now and then you can synchronise it by going to the corresponding section.</string>
 
     <!--Synchronize strings-->
 
     <!--My credentials strings-->
+    <string name="search">Search</string>
+    <string name="allKeysTab">All</string>
+    <string name="favTab">Favs.</string>
+    <string name="recientTab">Recients</string>
+    <string name="notesTab">Notes</string>
+    <string name="addNew">New</string>
+    <string name="itemCategory">Category</string>
+    <string name="itemColour">Colour</string>
+    <string name="itemURL" translatable="false">URL</string>
 
     <!--Settings strings-->
+    <string name="tabVisualize">Tabs visualization:</string>
+    <string name="textFormat">Names</string>
+    <string name="iconFormat">Icons</string>
+    <string name="maxAttempts">Max number of attempts to access:</string>
+    <string name="chooseTheme">Theme</string>
+    <string name="lightTheme">Light</string>
+    <string name="darkTheme">Dark</string>
+    <string name="waitTime">Waiting time (minutes) before require password again:</string>
 
 </resources>
