@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TableLayout;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -19,6 +22,7 @@ public class MyKeys extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_keys);
+        getSupportActionBar().setTitle(R.string.myCredentials);
 
         viewPager2 = findViewById(R.id.viewPager2);
         vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(),getLifecycle());
@@ -43,5 +47,25 @@ public class MyKeys extends AppCompatActivity {
             };
             new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> tab.setText(text[position])).attach();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.searchButton:
+                Toast.makeText(this,"settings",Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.settingsButton:
+                Intent intent = new Intent(this, Settings.class);
+                startActivity(intent);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
