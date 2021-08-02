@@ -40,6 +40,12 @@
     <string name="phoneReady">Your device is ready. From now and then you can synchronise it by going to the corresponding section.</string>
 
     <!--Synchronize strings-->
+    <string name="autoSnap">Place the square over the QR code of your internet browser</string>
+    <string name="genQRinfo">This will generate a secure QR with your settings and sync information</string>
+    <string name="genQRcreds">This will generate a secure QR with your credentials</string>
+    <string name="updateCode">Generate update code</string>
+    <string name="readCode">Scan update code</string>
+    <string name="cancelled">Cancelled</string>
 
     <!--My credentials strings-->
     <string name="search">Search</string>
@@ -53,6 +59,8 @@
     <string name="itemURL" translatable="false">URL</string>
 
     <!--Settings strings-->
+    <string name="changePass">Change your password</string>
+    <string name="newPass">Type new password</string>
     <string name="tabVisualize">Tabs visualization:</string>
     <string name="textFormat">Names</string>
     <string name="iconFormat">Icons</string>
@@ -61,5 +69,6 @@
     <string name="lightTheme">Light</string>
     <string name="darkTheme">Dark</string>
     <string name="waitTime">Waiting time (minutes) before require password again:</string>
+    <string name="done">Done</string>
 
 </resources>

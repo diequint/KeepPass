@@ -39,6 +39,12 @@
     <string name="phoneReady">Votre appareil est prêt. Dorénavant, vous pouvez le synchroniser dans la section correspondante</string> <!--A partir de maintenant-->
 
     <!--Synchronize strings-->
+    <string name="autoSnap">Placez le carré sur le code QR de votre navigateur Internet</string>
+    <string name="genQRinfo">Cela générera un QR sécurisé avec vos paramètres et informations de synchronisation</string>
+    <string name="genQRcreds">Cela générera un QR sécurisé avec vos identifiants</string>
+    <string name="updateCode">Générer code de mise à jour</string>
+    <string name="readCode">Scannez code de mise à jour</string>
+    <string name="cancelled">Annulé</string>
 
     <!--My credentials strings-->
     <string name="search">Search</string>
@@ -51,6 +57,8 @@
     <string name="itemColour">Couleur</string>
 
     <!--Settings strings-->
+    <string name="changePass">Changez mot de passe</string>
+    <string name="newPass">Entrer nouveau mot de passe</string>
     <string name="tabVisualize">Visualisation des onglets:</string>
     <string name="textFormat">Noms</string>
     <string name="iconFormat">Icônes</string>
@@ -59,5 +67,6 @@
     <string name="lightTheme">Clair</string>
     <string name="darkTheme">Foncé</string>
     <string name="waitTime">"Temps d'attente (minutes) avant de demander à nouveau le mot de passe"</string>
+    <string name="done">Fini</string>
 
 </resources>

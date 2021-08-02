@@ -1,6 +1,7 @@
 package com.diequint.keeppass;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,12 +18,14 @@ public class MainActivity extends AppCompatActivity {
     EditText PasswordBox;
     Button loginButton, getStartedBtn, newDevButton;
     String savedPass;
-    int count = 0, maxAttempts;
+    int count = 0, maxAttempts, waitTime;
+    long timestamp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
 
         welcomeText = findViewById(R.id.welcomeText);
         PasswordBox = findViewById(R.id.PasswordBox);
@@ -37,10 +40,8 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.loginButton:
-                Toast.makeText(getApplicationContext(), "clicking button", Toast.LENGTH_SHORT).show();
                 if (count <= maxAttempts) {
                     if (PasswordBox.getText().toString().equals(savedPass)) {
-                        Toast.makeText(getApplicationContext(), "IF condition", Toast.LENGTH_LONG).show();
                         Intent intent1 = new Intent(this, MyKeys.class);
                         startActivity(intent1);
                     } else {
@@ -67,11 +68,22 @@ public class MainActivity extends AppCompatActivity {
         String username = preferences.getString("username", "");
         savedPass = preferences.getString("password", "");
         maxAttempts = Integer.parseInt(preferences.getString("maxAttempts", "5"));
+        waitTime = Integer.parseInt(preferences.getString("waitTime", "5"));
+        timestamp = Long.parseLong(preferences.getString("timestamp", "1625115600"));
+        int visualise = Integer.parseInt(preferences.getString("visualise", "1"));
+        if (visualise == 2 || visualise ==4) {
+            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
         //Line below for development purposes only!
         Toast.makeText(getApplicationContext(), "Registered data:"+username+" "+savedPass+" "+maxAttempts, Toast.LENGTH_LONG).show();
         if (!username.equals("")) {
             welcomeText.append(", "+username);
             isRegistered();
+            long lapse = System.currentTimeMillis()/1000L-(waitTime*60);
+            if (timestamp >= lapse){
+                Intent intent1 = new Intent(this, MyKeys.class);
+                startActivity(intent1);
+            }
             notRegistered();//Temporaly eable bth to be visible so that I can make adjustments easily
         } else {
             notRegistered();

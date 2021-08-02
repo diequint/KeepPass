@@ -22,6 +22,7 @@ public class NewDevice extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_device);
+        getSupportActionBar().hide();
 
         step1 = findViewById(R.id.step1);
         step2 = findViewById(R.id.step2);

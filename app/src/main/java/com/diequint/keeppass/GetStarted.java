@@ -19,6 +19,7 @@ public class GetStarted extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.get_started);
+        getSupportActionBar().hide();
 
         personName = findViewById(R.id.personName);
         passBox = findViewById(R.id.passBox);
@@ -61,6 +62,12 @@ public class GetStarted extends AppCompatActivity {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("username", username);
         editor.putString("password", password);
+        editor.putString("maxAttempts", "5");
+        editor.putString("passLength", "10");
+        editor.putString("visualise", "1"); //up to 4
+        editor.putString("passComplex", "15"); //from 1 to 15
+        editor.putString("waitTime", "5");
+        editor.putString("timestamp", Long.toString(System.currentTimeMillis()/1000L)); //current time
         editor.commit();
         Toast.makeText(getApplicationContext(), /*getString(R.string.done)*/"Done", Toast.LENGTH_LONG).show();
     }

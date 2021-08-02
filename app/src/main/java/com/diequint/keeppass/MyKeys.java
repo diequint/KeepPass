@@ -2,9 +2,12 @@ package com.diequint.keeppass;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,13 +26,13 @@ public class MyKeys extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_keys);
         getSupportActionBar().setTitle(R.string.myCredentials);
+        boolean showTab = loadPreferences();
 
         viewPager2 = findViewById(R.id.viewPager2);
         vpAdapter = new ViewPagerAdapter(getSupportFragmentManager(),getLifecycle());
         viewPager2.setAdapter(vpAdapter);
         tabLayout = findViewById(R.id.tabLayout);
         //Below must be replaced with whatever comes from SharedPreferences
-        Boolean showTab = true;
         if (showTab) {
             int[] icon = new int[]{
                     R.drawable.ic_all,
@@ -67,5 +70,14 @@ public class MyKeys extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private boolean loadPreferences() {
+        SharedPreferences preferences = getSharedPreferences("preferences", Context.MODE_PRIVATE);
+        int appearance = Integer.parseInt(preferences.getString("visualise", "1"));
+        if (appearance == 2 || appearance ==4) {
+            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        return appearance <= 2;
     }
 }
