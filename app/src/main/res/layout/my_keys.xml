@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MyKeys">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="It works!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
@@ -27,7 +17,37 @@
         android:id="@+id/viewPager2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" >
+    </androidx.viewpager2.widget.ViewPager2>
 
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/groupFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:fab_addButtonColorNormal="@color/teal_700"
+        app:fab_addButtonColorPressed="@color/teal_200">
+        
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/syncThis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_sync"
+            android:alpha="100"
+            app:fab_colorNormal="@color/teal_700"
+            app:fab_colorPressed="@color/teal_200" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/newEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_credential"
+            app:fab_colorNormal="@color/teal_700"
+            app:fab_colorPressed="@color/teal_200" />
+        
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
