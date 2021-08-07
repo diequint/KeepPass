@@ -42,12 +42,18 @@ public class MyKeys extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Sync now",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), SyncData.class);
+                startActivity(intent);
             }
         });
         newEntry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"New Entry",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Credential.class);
+                intent.putExtra("title", getString(R.string.addNew));
+                //intent.putExtra("id", 0);
+                startActivity(intent);
             }
         });
     }
