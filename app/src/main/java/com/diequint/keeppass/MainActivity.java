@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.diequint.keeppass.ui.main.EncryptionHelper;
+import com.diequint.keeppass.support.EncryptionHelper;
 
 public class MainActivity extends AppCompatActivity {
     TextView welcomeText, passErr, firsttimeText;
@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
         getStartedBtn = findViewById(R.id.getStartedBtn);
         newDevButton = findViewById(R.id.newDevButton);
         loadPreferences();
-        EncryptionHelper encript = new EncryptionHelper();
-        Toast.makeText(getApplicationContext(), encript.generateRandom(15,10), Toast.LENGTH_LONG).show();
-        String msg = encript.encryptMessage("hola", "taco");
+        EncryptionHelper encrypt = new EncryptionHelper();
+        Toast.makeText(getApplicationContext(), encrypt.generateRandom(15,10), Toast.LENGTH_LONG).show();
+        String msg = encrypt.encryptMessage("hola", "taco");
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
-        Toast.makeText(getApplicationContext(), encript.decryptMessage(msg,"taco"), Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), encrypt.decryptMessage(msg,"taco"), Toast.LENGTH_LONG).show();
     }
 
     public void onClick(View view) {
