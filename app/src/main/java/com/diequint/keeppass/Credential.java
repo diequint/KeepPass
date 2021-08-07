@@ -1,10 +1,12 @@
 package com.diequint.keeppass;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -34,7 +36,6 @@ public class Credential extends AppCompatActivity {
         if (id != 0){
             //load from database
         }
-        Toast.makeText(getApplicationContext(), title, Toast.LENGTH_LONG).show();
         colourPicker = findViewById(R.id.pickColour);
         doneButton = findViewById(R.id.doneButton);
         myColour = ContextCompat.getColor(this,R.color.blue_500);
@@ -78,4 +79,24 @@ public class Credential extends AppCompatActivity {
         });
         ambilWarnaDialog.show();
     }
+
+    public void onClick(View view) {
+        final CharSequence[] options = {getString(R.string.yesMsg),getString(R.string.noMsg)};
+        final AlertDialog.Builder alertOptions = new AlertDialog.Builder(Credential.this);
+        alertOptions.setTitle(getString(R.string.wantDelete));
+        alertOptions.setItems(options, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (options[which].equals(getString(R.string.yesMsg))) {
+                    Intent intent = new Intent(getApplicationContext(), MyKeys.class);
+                    startActivity(intent);
+                } else if (options[which].equals(getString(R.string.noMsg))){
+                    Toast.makeText(getApplicationContext(), getString(R.string.cancelled), Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
+                }
+            }
+        });
+        alertOptions.show();
+    }
+
 }

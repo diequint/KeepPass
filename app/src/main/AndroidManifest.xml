@@ -12,19 +12,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KeepPass">
-        <activity android:name=".SyncData"/>
+        <activity
+            android:name=".SyncData"
+            android:parentActivityName=".MyKeys"/>
         <activity
             android:name=".Credential"
             android:parentActivityName=".MyKeys" /> <!-- before: Theme.MaterialComponents.Light.NoActionBar -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewDevice" />
-        <activity android:name=".GetStarted" />
+        <activity
+            android:name=".NewDevice"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".GetStarted"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MyKeys"
             android:parentActivityName=".MainActivity" />

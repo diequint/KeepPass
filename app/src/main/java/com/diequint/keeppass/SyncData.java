@@ -27,12 +27,14 @@ public class SyncData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sync_data);
-        getSupportActionBar().hide();
+        getSupportActionBar().setTitle(R.string.synchronise);
 
         genCode = findViewById(R.id.genCode);
         readCode = findViewById(R.id.readCode);
         addCode = findViewById(R.id.addCode);
         generatedQR = findViewById(R.id.generatedQR);
+        generatedQR.setScaleX(1.4f);
+        generatedQR.setScaleY(1.4f);
 
         genCode.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,8 +44,6 @@ public class SyncData extends AppCompatActivity {
                     BitMatrix bitMatrix = formatWriter.encode("sopita", BarcodeFormat.QR_CODE,500,500);
                     BarcodeEncoder myEncoder = new BarcodeEncoder();
                     Bitmap bitmap = myEncoder.createBitmap(bitMatrix);
-                    generatedQR.setScaleX(1.5f);
-                    generatedQR.setScaleY(1.5f);
                     generatedQR.setImageBitmap(bitmap);
                 } catch (Exception e){
                     Toast.makeText(getApplicationContext(), getString(R.string.cancelled), Toast.LENGTH_LONG).show();

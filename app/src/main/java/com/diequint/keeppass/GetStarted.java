@@ -19,7 +19,7 @@ public class GetStarted extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.get_started);
-        getSupportActionBar().hide();
+        getSupportActionBar().setTitle(R.string.getStarted);
 
         personName = findViewById(R.id.personName);
         passBox = findViewById(R.id.passBox);

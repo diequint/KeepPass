@@ -39,11 +39,13 @@
     <string name="phoneReady">Votre appareil est prêt. Dorénavant, vous pouvez le synchroniser dans la section correspondante</string> <!--A partir de maintenant-->
 
     <!--Synchronize strings-->
-    <string name="autoSnap">Placez le carré sur le code QR de votre navigateur Internet</string>
-    <string name="genQRinfo">Cela générera un QR sécurisé avec vos paramètres et informations de synchronisation</string>
-    <string name="genQRcreds">Cela générera un QR sécurisé avec vos identifiants</string>
-    <string name="updateCode">Générer code de mise à jour</string>
-    <string name="readCode">Scannez code de mise à jour</string>
+    <string name="autoSnap">Placez le carré sur le code QR de votre autre appareil</string>
+    <string name="genQRinfo">Synchroniser mes informations et mes paramètres (pour ajouter de nouveaux appareils)</string>
+    <string name="genQRcreds">"Synchroniser mes credentials à travers un code QR sûr"</string>
+    <string name="or">- OU -</string>
+    <string name="addCode">"Générer QR de 'Neuf appareil'"</string>
+    <string name="genCode">Générer QR de synchronisation</string>
+    <string name="readCode">Scannez QR de synchronisation</string>
     <string name="cancelled">Annulé</string>
 
     <!--My credentials strings-->
@@ -52,8 +54,20 @@
     <string name="favTab">Favs.</string>
     <string name="recientTab">Recients</string>
     <string name="notesTab">Notes</string>
+    <string name="wantDelete">Nouvelle</string>
+    <string name="yesMsg">Category</string>
+    <string name="noMsg">Couleur</string>
+
+    <!--Credential-->
     <string name="addNew">Nouvelle</string>
-    <string name="itemCategory">Category</string>
+    <string name="edit">Modifier</string>
+    <string name="fillData">Remplissez les informations suivantes</string>
+    <string name="siteName">Nom du site</string>
+    <string name="typeNote">Écrivez votre note ici</string>
+    <string name="chooseCat">Sélectionne une catégorie ( optionnel)</string>
+    <string name="itemCategory">catégorie</string>
+    <string name="genPass">Générer un mot de passe sûr</string>
+    <string name="pickColour">Sélectionne un couleur</string>
     <string name="itemColour">Couleur</string>
 
     <!--Settings strings-->

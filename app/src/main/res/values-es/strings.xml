@@ -39,11 +39,13 @@
     <string name="phoneReady">Su dispositivo está listo. A partir de ahora puede sincronizarlo en la sección correspondiente</string>
 
     <!--Synchronize strings-->
-    <string name="autoSnap">Coloque el cuadro sobre el código QR de su navegador de internet</string>
-    <string name="genQRinfo">Esto generará un QR seguro con sus configuraciones e información</string>
-    <string name="genQRcreds">Esto generará un QR seguro con sus credenciales</string>
-    <string name="updateCode">Generar código de actualización</string>
-    <string name="readCode">Escanear código de actualización</string>
+    <string name="autoSnap">Coloque el cuadro sobre el código QR de su otro dispositivo</string>
+    <string name="genQRinfo">Sincronizar mi información y configuración (para añadir nuevos dispositivos)</string>
+    <string name="genQRcreds">Sincronizar mis credenciales mediante un código QR seguro</string>
+    <string name="or">- O bien -</string>
+    <string name="addCode">"Generar QR de 'Nuevo dispositivo'"</string>
+    <string name="genCode">Generar QR de sincronización</string>
+    <string name="readCode">Escanear QR de sincronización</string>
     <string name="cancelled">Cancelado</string>
 
     <!--My credentials strings-->
@@ -52,8 +54,20 @@
     <string name="favTab">Favorit.</string>
     <string name="recientTab">Recient.</string>
     <string name="notesTab">Notas</string>
+    <string name="wantDelete">¿Quieres borrar esta credencial?</string>
+    <string name="yesMsg">Si</string>
+    <string name="noMsg">No</string>
+
+    <!--Credential-->
     <string name="addNew">Nueva</string>
+    <string name="edit">Editar</string>
+    <string name="fillData">Llene los siguientes datos</string>
+    <string name="siteName">Nombre del sitio</string>
+    <string name="typeNote">Escriba su nota aquí</string>
+    <string name="chooseCat">Seleccione una categoría (opcional)</string>
     <string name="itemCategory">Categoría</string>
+    <string name="genPass">Generar contraseña segura</string>
+    <string name="pickColour">Seleccione un color</string>
     <string name="itemColour">Color</string>
 
     <!--Settings strings-->
